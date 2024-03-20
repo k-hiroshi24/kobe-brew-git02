@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "d68fd216-6b2b-4cb0-ae31-cf3b880586f6": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18776793776447__d68fd216-6b2b-4cb0-ae31-cf3b880586f6-168352878922941202-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--18776793776447__d68fd216-6b2b-4cb0-ae31-cf3b880586f6-168352878922941202-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "fade_in": false,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "d68fd216-6b2b-4cb0-ae31-cf3b880586f6",
+    "main",
+    "form"
+  ]
+}

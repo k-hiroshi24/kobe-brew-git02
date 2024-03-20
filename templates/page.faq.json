@@ -1,0 +1,176 @@
+{
+  "sections": {
+    "fc8401d1-9524-4338-bc34-8d278a4c1310": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20012329435455__fc8401d1-9524-4338-bc34-8d278a4c1310-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>よくあるご質問<\/strong>",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "template--20012329435455__fc8401d1-9524-4338-bc34-8d278a4c1310-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "fade_in": false,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "54f3986b-e203-4dcf-a6ff-77cdac62b0f8": {
+      "type": "accordion-section",
+      "blocks": {
+        "template--20012329435455__54f3986b-e203-4dcf-a6ff-77cdac62b0f8-block-1": {
+          "type": "block",
+          "settings": {
+            "ac-q": "Q  注文後に商品は変更・キャンセルはできますか？",
+            "ac-a": "<p>コンテンツ内容を入力してください<\/p>"
+          }
+        },
+        "template--20012329435455__54f3986b-e203-4dcf-a6ff-77cdac62b0f8-block-2": {
+          "type": "block",
+          "settings": {
+            "ac-q": "Q 注文後に配送先は変更できますか？",
+            "ac-a": "<p>コンテンツ内容を入力してください<\/p>"
+          }
+        },
+        "template--20012329435455__54f3986b-e203-4dcf-a6ff-77cdac62b0f8-block-3": {
+          "type": "block",
+          "settings": {
+            "ac-q": "Q 配送先住所を間違えてしまいました。",
+            "ac-a": "<p>コンテンツ内容を入力してください<\/p>"
+          }
+        },
+        "aadfd578-00a0-4136-b808-efe16d0f5c6a": {
+          "type": "block",
+          "settings": {
+            "ac-q": "Q 注文からどのくらいで商品が届きますか？",
+            "ac-a": "<p>コンテンツ内容を入力してください<\/p>"
+          }
+        },
+        "a57b77dc-576f-4fd7-a31b-4760a9572f68": {
+          "type": "block",
+          "settings": {
+            "ac-q": "Q 日時指定はできますか？",
+            "ac-a": "<p>コンテンツ内容を入力してください<\/p>"
+          }
+        },
+        "b02dc18f-eda0-4297-9432-1c28e6deec20": {
+          "type": "block",
+          "settings": {
+            "ac-q": "Q 送料はかかりますか？",
+            "ac-a": "<p>コンテンツ内容を入力してください<\/p>"
+          }
+        },
+        "dbe3e17d-cd51-4000-8bc1-b0e46da9a7f2": {
+          "type": "block",
+          "settings": {
+            "ac-q": "Q 配送業者は指定できますか？",
+            "ac-a": "<p>コンテンツ内容を入力してください<\/p>"
+          }
+        },
+        "c2790848-c887-49b7-b7ec-24b7dfb642ed": {
+          "type": "block",
+          "settings": {
+            "ac-q": "Q 商品の返品・交換はできますか？",
+            "ac-a": "<p>コンテンツ内容を入力してください<\/p>"
+          }
+        },
+        "a3169ea5-afeb-43bc-87de-fb91716ef1d8": {
+          "type": "block",
+          "settings": {
+            "ac-q": "Q 領収書は発行できますか？",
+            "ac-a": "<p>コンテンツ内容を入力してください<\/p>"
+          }
+        },
+        "6b9cd5bb-f09b-4d76-af39-60d9306616da": {
+          "type": "block",
+          "settings": {
+            "ac-q": "Q クーポンは利用できますか？",
+            "ac-a": "<p>コンテンツ内容を入力してください<\/p>"
+          }
+        },
+        "791039a1-025d-4b37-afc5-ae9016753880": {
+          "type": "block",
+          "settings": {
+            "ac-q": "Q ギフト包装はできますか？",
+            "ac-a": "<p>はい！対応しております。こちらをご覧下さい。<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20012329435455__54f3986b-e203-4dcf-a6ff-77cdac62b0f8-block-1",
+        "template--20012329435455__54f3986b-e203-4dcf-a6ff-77cdac62b0f8-block-2",
+        "template--20012329435455__54f3986b-e203-4dcf-a6ff-77cdac62b0f8-block-3",
+        "aadfd578-00a0-4136-b808-efe16d0f5c6a",
+        "a57b77dc-576f-4fd7-a31b-4760a9572f68",
+        "b02dc18f-eda0-4297-9432-1c28e6deec20",
+        "dbe3e17d-cd51-4000-8bc1-b0e46da9a7f2",
+        "c2790848-c887-49b7-b7ec-24b7dfb642ed",
+        "a3169ea5-afeb-43bc-87de-fb91716ef1d8",
+        "6b9cd5bb-f09b-4d76-af39-60d9306616da",
+        "791039a1-025d-4b37-afc5-ae9016753880"
+      ],
+      "settings": {
+        "accordion-margin-top": 40,
+        "accordion-margin-bottom": 132,
+        "ac-title-font-color": "#ffffff",
+        "ac-contents_font-color": "#0b4566",
+        "ac-title_background-color": "#0b4566",
+        "ac-title_border-color": "#ffffff",
+        "ac-contents_background-color": "#ffffff",
+        "ac-contents_border-color": "#ffffff",
+        "ac-arrow-color": "#ffffff"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "d24f2c77-19f4-48e4-92c0-1d761c615be8": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "LINE UP",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "line-up",
+        "products_to_show": 12,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "accent-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_ranking": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "fc8401d1-9524-4338-bc34-8d278a4c1310",
+    "54f3986b-e203-4dcf-a6ff-77cdac62b0f8",
+    "main",
+    "d24f2c77-19f4-48e4-92c0-1d761c615be8"
+  ]
+}

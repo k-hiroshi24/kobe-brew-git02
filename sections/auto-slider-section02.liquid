@@ -1,0 +1,170 @@
+<style>
+ .spaced-section {
+   margin-top:0;
+ }
+
+ .auto-slider-section{
+    margin-top: {{ section.settings.auto-slider-margin-top }}px;
+    margin-bottom: {{ section.settings.auto-slider-margin-bottom }}px;
+
+ }
+ 
+ .auto-slider-{{ section.id }} {
+   animation: logofadeIn 2.5s ease 0s 1 normal;
+   -webkit-animation: logofadeIn 2.5s ease 0s 1 normal;
+ }
+ 
+ @keyframes logofadeIn { 
+       0% {opacity: 0} 
+       100% {opacity: 1} 
+   }
+
+   @-webkit-keyframes logofadeIn {
+       0% {opacity: 0}
+       100% {opacity: 1}
+   }
+ 
+{% for block in section.blocks %}
+ {% assign index = forloop.index %}
+{% endfor %}
+
+ @-webkit-keyframes scroll {
+ 0% {
+   -webkit-transform: translateX(0);;
+           transform: translateX(0);;
+ }
+ 100% {
+   -webkit-transform: translateX(calc(-250px * {{index}}));
+           transform: translateX(calc(-250px * {{index}}));
+ }
+}
+
+@keyframes scroll {
+ 0% {
+   -webkit-transform: translateX(0);;
+           transform: translateX(0);;
+ }
+ 100% {
+   -webkit-transform: translateX(calc(-250px * {{index}}));
+           transform: translateX(calc(-250px * {{index}}));
+ }
+}
+
+
+	.auto-slider-{{ section.id }} .auto-slide-track-{{ section.id }} {
+     display: flex;
+     width: calc(250px * {{index}} * 2);
+		-webkit-animation: scroll 50s linear infinite;
+         animation: scroll 50s linear infinite;      
+
+	}
+
+
+   .auto-slider-{{ section.id }} {
+       background: white;
+       box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+       height: 200px;
+       margin: auto;
+       overflow:hidden;
+       position: relative;
+       width: 100%;
+       display: flex;
+   }
+
+	.auto-slide-{{ section.id }} {
+		height: 200px;
+		width: 250px;
+
+	}
+
+   .auto-slide-{{ section.id }} img {
+		height: 200px;
+		width: 250px;
+       object-fit: cover;
+   }
+</style>
+
+
+<div class="auto-slider-{{ section.id }}">
+	<div class="auto-slide-track-{{ section.id }}">
+     {% for block in section.blocks %}
+       <div class="auto-slide-{{ section.id }}">
+　　　　　　　　　　　　　　<img src="{{ block.settings.autoslide_img | img_url: 'master'  }}" alt=""  width="250" height="200"/> 
+		</div>
+     {% endfor %}
+     {% for block in section.blocks %}
+       <div class="auto-slide-{{ section.id }}">
+      　　　　　　　　 <img src="{{ block.settings.autoslide_img | img_url: 'master'  }}" alt=""   width="250" height="200" />
+		</div>
+     {% endfor %}
+	</div>
+</div>
+
+{% schema %}
+{
+"name": "オートループスライダー",
+"class": "auto-slider-section",
+"settings": [
+        {
+            "type": "range",
+            "id": "auto-slider-margin-top",
+            "label": "オートスライダーセクションの上部余白",
+            "min": 0,
+            "max": 300,
+            "step": 4,
+            "unit": "px",
+            "default": 40,
+            "info": "上部余白の設定"
+        },
+        {
+            "type": "range",
+            "id": "auto-slider-margin-bottom",
+            "label": "オートスライダーセクションの下部余白",
+            "min": 0,
+            "max": 300,
+            "step": 4,
+            "unit": "px",
+            "default": 40,
+            "info": "下部余白の設定"
+        }
+    ],
+"blocks": [
+  {
+    "type": "autoslide_image",
+    "name": "画像",
+    "limit": 10,
+    "settings": [
+
+      {
+          "type": "image_picker",
+          "id": "autoslide_img",
+          "label": "画像"
+      }
+    ]
+  }
+],
+"presets": [
+   {
+     "name": "オートループスライダー",
+     "blocks": [
+
+       {
+         "type": "autoslide_image"
+       },
+       {
+         "type": "autoslide_image"
+       },
+       {
+         "type": "autoslide_image"
+       },
+       {
+         "type": "autoslide_image"
+       },
+       {
+         "type": "autoslide_image"
+       }
+     ]
+   }
+ ]
+}
+{% endschema %}

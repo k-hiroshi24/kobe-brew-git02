@@ -1,0 +1,279 @@
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+
+<div
+  class="page-width"
+  style="margin-top: {{ section.settings.ad-margin-top }}px;margin-bottom:{{ section.settings.ad-margin-bottom }}px"
+  ;>
+  <div
+    class='grid grid--gapless grid--1-col grid--2-col-tablet{% if section.settings.ad-select == 'text_first' %} image-with-text__grid--reverse{% endif %}'>
+    <div class="image-with-text__media-item grid__item">
+      <div class="image-with-text__media image-with-text__media--adapt{% if section.settings.ad-image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}"{% if section.settings.ad-image != blank %}style="padding-bottom: {{ 1 | divided_by: section.settings.ad-image.aspect_ratio | times: 100  }}%;"{% endif %}>
+        {% if section.settings.ad-image != blank %}
+          <img src="{{ section.settings.ad-image | img_url: '1500x' }}" alt="">
+        {% else %}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="image-with-text__text-item grid__item">
+      <div
+        class='image-with-text__content image-with-text__content--desktop-{{ section.settings.text-area-layout_pc }} image-with-text__content--mobile-{{ section.settings.text-area-layout_sp}}
+        {% if section.settings.ad-select != 'text_first' %}
+          {% if section.settings.ad-broken-layout == "broken" %}
+            image-with-text__content--broken-layout_left
+          {% elsif section.settings.ad-broken-layout == "broken" %}
+            image-with-text__content--broken-layout_right
+          {% endif %}
+
+        {% else %}
+          {% if section.settings.ad-broken-layout == "broken" %}
+            image-with-text__content--broken-layout_right
+          {% elsif section.settings.ad-broken-layout == "broken" %}
+            image-with-text__content--broken-layout_left
+          {% endif %}
+        {% endif %}'>
+
+
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'block-heading' %}
+            <h2 class="image-with-text__heading h1" style="background: #fff; padding: 10px;font-size:{{ block.settings.header-font-size }}px;">{{ block.settings.ad-header }}</h2>
+            {% when 'block-text' %}
+            <div class="image-with-text__text rte" style="background: #fff; padding: 10px;">{{ block.settings.ad-richtext }}</div>
+            {% when 'block-button' %}
+            <a
+              href="{{ block.settings.ad-button_url }}"
+              class="button button--primary"
+              style="border-radius: {{ block.settings.ad-button-radius }}px;">{{ block.settings.ad-button_text }}</a>
+        {% else %}
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* ブロークンレイアウト */
+  .image-with-text__content--broken-layout_left {
+    position: relative;
+    top: 0;
+    right: 150px;
+  }
+  .image-with-text__content--broken-layout_right {
+    position: relative;
+    top: 0;
+    left: 200px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .image-with-text__content--broken-layout_left {
+      position: relative;
+      top: -60px;
+      right: 0;
+    }
+  }
+  @media screen and (max-width: 749px) {
+    .image-with-text__content--broken-layout_right {
+      position: relative;
+      top: -60px;
+      left: 0;
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "テキスト付き画像（ブロークンレイアウト）",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "画像エリアの設定"
+
+      },
+      {
+        "type": "image_picker",
+        "id": "ad-image",
+        "label": "画像の選択",
+        "info": "画像を選びます"
+      },
+      {
+        "type": "header",
+        "content": "レイアウトの変更"
+      },
+      {
+        "type": "select",
+        "id": "ad-select",
+        "options": [
+          {
+            "value": "image_first",
+            "label": "画像スタート"
+          }, {
+            "value": "text_first",
+            "label": "テキストスタート"
+          }
+        ],
+        "default": "image_first",
+        "label": "PCのレイアウト変更",
+        "info": "PCのレイアウトを変更できます"
+      },{
+        "type": "range",
+        "id": "ad-margin-top",
+        "label": "上部の余白",
+        "min": 0,
+        "max": 300,
+        "step": 4,
+        "default": 40,
+        "info": "セクションの上部の余白を調整できます"
+      }, {
+        "type": "range",
+        "id": "ad-margin-bottom",
+        "label": "下部の余白",
+        "min": 0,
+        "max": 300,
+        "step": 4,
+        "default": 40,
+        "info": "セクションの下部の余白を調整できます"
+      }, {
+        "type": "radio",
+        "id": "ad-broken-layout",
+        "label": "画像にテキストを重ねる",
+        "options": [
+          {
+            "value": "normal",
+            "label": "重ねない"
+          }, {
+            "value": "broken",
+            "label": "重ねる"
+          }
+        ],
+        "default": "normal",
+        "info": "画像とテキストを重ねることができます"
+      },{
+        "type": "select",
+        "id": "text-area-layout_pc",
+        "label": "PC時のテキストの配置",
+        "options": [
+          {
+            "value": "left",
+            "label": "左寄せ"
+          },
+          {
+            "value": "center",
+            "label": "中央寄せ"
+          },
+          {
+            "value": "right",
+            "label": "右寄せ"
+          }
+        ],
+        "default": "left",
+        "info": "PC時のテキストの配置を設定してください"
+      },{
+        "type": "select",
+        "id": "text-area-layout_sp",
+        "label": "SP時のテキストの配置",
+        "options": [
+          {
+            "value": "left",
+            "label": "左寄せ"
+          },
+          {
+            "value": "center",
+            "label": "中央寄せ"
+          },
+          {
+            "value": "right",
+            "label": "右寄せ"
+          }
+        ],
+        "default": "left",
+        "info": "SP時のテキストの配置を設定してください"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block-heading",
+        "name": "ブロック見出し",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "ad-header",
+            "label": "見出し",
+            "default": "デフォルトの見出し！！！！",
+            "info": "見出しを入力してください"
+          },{
+            "type": "range",
+            "id": "header-font-size",
+            "label": "見出しのフォントサイズ",
+            "min": 16,
+            "max": 40,
+            "default": 32,
+            "unit": "px",
+            "step": 1,
+            "info": "見出しの文字の大きさを設定してください"
+          }
+        ]
+      }, {
+        "type": "block-text",
+        "name": "ブロックテキスト",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "ad-richtext",
+            "label": "テキスト",
+            "default": "<p>デフォルトで入る本文</p>",
+            "info": "テキストを入力してください"
+          }
+        ]
+      }, {
+        "type": "block-button",
+        "name": "ブロックボタン",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "ad-button_text",
+            "label": "ボタンのテキスト",
+            "default": "ボタンのテキスト",
+            "info": "ボタンのテキストを入力してください"
+          }, {
+            "type": "url",
+            "id": "ad-button_url",
+            "label": "ボタンのリンク",
+            "info": "ボタンのリンクURLを入力してください"
+          }, {
+            "type": "range",
+            "id": "ad-button-radius",
+            "min": 0,
+            "max": 40,
+            "step": 2,
+            "unit": "px",
+            "label": "ボタンの丸み",
+            "default": 0,
+            "info": "ボタンの丸みの設定"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "テキスト付き画像（ブロークンレイアウト",
+        "blocks": [
+          {
+            "type": "block-heading"
+          }, {
+            "type": "block-text"
+          }, {
+            "type": "block-button"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

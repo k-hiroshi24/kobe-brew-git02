@@ -1,0 +1,289 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "dd9ebf89-23f2-41c5-9a5a-9353c55fc035": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18776793809215__dd9ebf89-23f2-41c5-9a5a-9353c55fc035-16833627260a08dc80-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "ABOUT KOBE BREW",
+            "heading_size": "h1"
+          }
+        },
+        "template--18776793809215__dd9ebf89-23f2-41c5-9a5a-9353c55fc035-16833627260a08dc80-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>KOBE BREWについて<br\/><br\/><\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18776793809215__dd9ebf89-23f2-41c5-9a5a-9353c55fc035-16833627260a08dc80-0",
+        "template--18776793809215__dd9ebf89-23f2-41c5-9a5a-9353c55fc035-16833627260a08dc80-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/yasin-aribuga-vCHHUpiU9sY-unsplash.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "js-fade_in": false,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "9c4aa020-7c3f-40e6-9395-2fcd1a1e4979": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18776793809215__9c4aa020-7c3f-40e6-9395-2fcd1a1e4979-168308686438855314-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>KOBE BREWの３つのこだわり<\/strong>",
+            "heading_size": "h2"
+          }
+        },
+        "template--18776793809215__9c4aa020-7c3f-40e6-9395-2fcd1a1e4979-168308686438855314-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>ー私たちには大切にしていることー<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18776793809215__9c4aa020-7c3f-40e6-9395-2fcd1a1e4979-168308686438855314-0",
+        "template--18776793809215__9c4aa020-7c3f-40e6-9395-2fcd1a1e4979-168308686438855314-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "fade_in": true,
+        "padding_top": 88,
+        "padding_bottom": 16
+      }
+    },
+    "3af995d2-7aa9-47ca-85f9-df4351c403a1": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18776793809215__3af995d2-7aa9-47ca-85f9-df4351c403a1-1683086959e24a6cf0-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1.png",
+            "title": "品質のこだわり",
+            "text": "<p>皆様に安心してご提供するために徹底した品質管理体制のもと、<\/p><p>５０個の厳しい基準を満たした<\/p><p>製品のみ出荷しております。<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18776793809215__3af995d2-7aa9-47ca-85f9-df4351c403a1-1683086959e24a6cf0-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2.png",
+            "title": "面白さのこだわり",
+            "text": "<p>クラフトビールの奥深さに魅了されたクラフトマン達が厳しい基準で日々製造しておりますが、その中でもやっていてたのしいと思えるようなエッセンスを加えることを大事にしております。<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18776793809215__3af995d2-7aa9-47ca-85f9-df4351c403a1-1683086959e24a6cf0-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3.png",
+            "title": "挑戦のこだわり",
+            "text": "<p>KOBE BREWはまだまだ挑戦の途中です。これから固定概念にとらわれることなく、様々なことにチャレンジして、お客様にとってより楽しめてる、面白い商品を提供していきます。<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18776793809215__3af995d2-7aa9-47ca-85f9-df4351c403a1-1683086959e24a6cf0-0",
+        "template--18776793809215__3af995d2-7aa9-47ca-85f9-df4351c403a1-1683086959e24a6cf0-1",
+        "template--18776793809215__3af995d2-7aa9-47ca-85f9-df4351c403a1-1683086959e24a6cf0-2"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "js-fade_in": true,
+        "padding_top": 36,
+        "padding_bottom": 100
+      }
+    },
+    "d89da93c-f7a8-4fb5-9d4f-a83ef853a7c2": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18776793809215__d89da93c-f7a8-4fb5-9d4f-a83ef853a7c2-1683087195ac1f740d-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "個性派の６アイテム",
+            "heading_size": "h2"
+          }
+        },
+        "template--18776793809215__d89da93c-f7a8-4fb5-9d4f-a83ef853a7c2-1683087195ac1f740d-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>エール酵母で発酵した6種類のビール達。それぞれに個性があり、それぞれにあう料理を探すのみまた楽しみ方の１つ。是非、ワインのようにペアリングを楽しんでください。<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18776793809215__d89da93c-f7a8-4fb5-9d4f-a83ef853a7c2-1683087195ac1f740d-0",
+        "template--18776793809215__d89da93c-f7a8-4fb5-9d4f-a83ef853a7c2-1683087195ac1f740d-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/19.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "js-fade_in": true,
+        "mobile_content_alignment": "left",
+        "padding_top": 100,
+        "padding_bottom": 36
+      }
+    },
+    "aceb3ec0-d99b-4657-b285-29a4dba02c3d": {
+      "type": "image-with-text",
+      "blocks": {
+        "e11043ff-6851-4461-a2af-f3fca91c4997": {
+          "type": "heading",
+          "settings": {
+            "heading": "素材・製法・品質",
+            "heading_size": "h2"
+          }
+        },
+        "23274b3a-3fed-4f57-a23d-68a7edbdbb68": {
+          "type": "text",
+          "settings": {
+            "text": "<p>丹波篠山の新鮮な水を生かし、上面発酵のエールビールにこだわります。下面発酵より、より個性的で、香り豊かで、ワインに似た楽しみ方ができると考えるからです。<\/p><p>また品質にも妥協しません。５０個の品質チェック項目をクリアしたもののみを出荷し、皆様に安心して楽しんでいただけるよう徹底しております。<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "e11043ff-6851-4461-a2af-f3fca91c4997",
+        "23274b3a-3fed-4f57-a23d-68a7edbdbb68"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/malt-g086a13d11_1280.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "js-fade_in": true,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "62be9a03-0ff5-4803-a54c-69d984a2b8e6": {
+      "type": "image-with-text",
+      "blocks": {
+        "5ea5f6db-aac7-4b0e-aff5-5f8b5864ec54": {
+          "type": "heading",
+          "settings": {
+            "heading": "人を想う気持ち",
+            "heading_size": "h2"
+          }
+        },
+        "0b9d1257-43de-428a-9cdc-75a2528d07e5": {
+          "type": "text",
+          "settings": {
+            "text": "<p>大切な方にプレゼントをする。する方もされる方もとても気持ちがいいですよね。KOBE BREWは贈り物にぴったりです。<\/p><p>当サイトではお届け先を指定する「通常ギフト」はもちろん、住所がわからない方にも贈れる「eギフト」に対応しております。<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "5ea5f6db-aac7-4b0e-aff5-5f8b5864ec54",
+        "0b9d1257-43de-428a-9cdc-75a2528d07e5"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/helena-lopes-9Wt7RKWkvnY-unsplash.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "js-fade_in": true,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 100
+      }
+    },
+    "d24f2c77-19f4-48e4-92c0-1d761c615be8": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "LINE UP",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "line-up",
+        "products_to_show": 12,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "accent-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "dd9ebf89-23f2-41c5-9a5a-9353c55fc035",
+    "9c4aa020-7c3f-40e6-9395-2fcd1a1e4979",
+    "3af995d2-7aa9-47ca-85f9-df4351c403a1",
+    "d89da93c-f7a8-4fb5-9d4f-a83ef853a7c2",
+    "aceb3ec0-d99b-4657-b285-29a4dba02c3d",
+    "62be9a03-0ff5-4803-a54c-69d984a2b8e6",
+    "d24f2c77-19f4-48e4-92c0-1d761c615be8"
+  ]
+}

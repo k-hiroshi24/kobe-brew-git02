@@ -1,0 +1,111 @@
+<div class="section-btn_wrapper">
+  <a href="{{ section.settings.section-btn_link }}" class="section-btn">{{ section.settings.btn-text }}</a>
+</div>
+
+
+<style>
+  .section-btn_wrapper {
+    text-align: center;
+    margin-top: {{ section.settings.button-section-margin-top }}px;
+    margin-bottom: {{ section.settings.button-section-margin-bottom }}px;
+  }
+  .section-btn {
+    position: relative;
+    transition: 0.6s all;
+    font-size: {{ section.settings.btn-font-size}}px;
+    display: inline-block;
+    padding: 10px 80px;
+    text-align: center;
+    text-decoration: none;
+    color: {{ section.settings.btn-font-coler }};
+    background: {{ section.settings.btn-bg-coler }};
+    border-radius: {{ section.settings.btn-radius }}px;
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+
+  }
+  .section-btn:hover {
+    opacity: .6;
+  }
+</style>
+
+
+{% schema %}
+  {
+    "name": "ボタンセクション",
+    "settings": [
+      {
+        "type": "url",
+        "id": "section-btn_link",
+        "label": "ボタンのリンク"
+      },
+      {
+        "type": "text",
+        "id": "btn-text",
+        "label": "ボタンテキスト",
+        "default": "button",
+        "info": "ボタンのテキストを入力してください"
+      },
+      {
+        "type": "range",
+        "id": "btn-radius",
+        "label": "ボタンの丸み",
+        "default": 0,
+        "min": 0,
+        "max": 30,
+        "unit": "px",
+        "step": 1,
+        "info": "ボタンの丸みを設定してください"
+      },
+      {
+        "type": "color",
+        "id": "btn-bg-coler",
+        "label": "ボタンの背景色",
+        "default": "#000",
+        "info": "ボタンの背景色を設定してください"
+      }, {
+        "type": "color",
+        "id": "btn-font-coler",
+        "label": "ボタンのテキストカラー",
+        "default": "#fff",
+        "info": "ボタンの背景色を設定してください"
+      }, {
+        "type": "range",
+        "id": "btn-font-size",
+        "label": "ボタンのフォントサイズ",
+        "default": 16,
+        "min": 12,
+        "max": 32,
+        "unit": "px",
+        "step": 1,
+        "info": "ボタンのフォントサイズを設定してください"
+      },
+        {
+            "type": "range",
+            "id": "button-section-margin-top",
+            "label": "ボタンセクションの上部余白",
+            "min": 0,
+            "max": 300,
+            "step": 4,
+            "unit": "px",
+            "default": 40,
+            "info": "上部余白の設定"
+        },
+        {
+            "type": "range",
+            "id": "button-section-margin-bottom",
+            "label": "ボタンセクションの下部余白",
+            "min": 0,
+            "max": 300,
+            "step": 4,
+            "unit": "px",
+            "default": 40,
+            "info": "下部余白の設定"
+        }
+    ],
+    "presets": [
+      {
+        "name": "ボタンセクション！！"
+      }
+    ]
+  }
+{% endschema %}

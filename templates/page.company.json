@@ -1,0 +1,99 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "9c4aa020-7c3f-40e6-9395-2fcd1a1e4979": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18776793809215__9c4aa020-7c3f-40e6-9395-2fcd1a1e4979-168308686438855314-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>会社概要<\/strong>",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "template--18776793809215__9c4aa020-7c3f-40e6-9395-2fcd1a1e4979-168308686438855314-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "fade_in": true,
+        "padding_top": 88,
+        "padding_bottom": 16
+      }
+    },
+    "be19e8a1-0582-4b3d-82a2-ba60b381a74f": {
+      "type": "company",
+      "blocks": {
+        "template--19522947252543__be19e8a1-0582-4b3d-82a2-ba60b381a74f-16872493504c6315df-0": {
+          "type": "table",
+          "settings": {
+            "th": "会社名",
+            "td": "<p>株式会社 KOBE BREW<\/p>"
+          }
+        },
+        "a868ba01-6f9b-4f64-8b4f-c86649761949": {
+          "type": "table",
+          "settings": {
+            "th": "代表者",
+            "td": "<p>川口浩志<\/p>"
+          }
+        },
+        "fa17a3d7-f34f-4264-9285-1934e16e29ba": {
+          "type": "table",
+          "settings": {
+            "th": "店舗・工場住所",
+            "td": "<p>兵庫県丹波篠山市〇〇<\/p>"
+          }
+        },
+        "f0cfc6b0-c64c-4acb-83dd-1f4abcc4308c": {
+          "type": "table",
+          "settings": {
+            "th": "TEL",
+            "td": "<p>〇〇-〇〇〇〇<\/p>"
+          }
+        },
+        "22fe3296-5ed9-44bd-b67d-1aa4686e41c0": {
+          "type": "table",
+          "settings": {
+            "th": "営業時間",
+            "td": "<p>10:00~19:00<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19522947252543__be19e8a1-0582-4b3d-82a2-ba60b381a74f-16872493504c6315df-0",
+        "a868ba01-6f9b-4f64-8b4f-c86649761949",
+        "fa17a3d7-f34f-4264-9285-1934e16e29ba",
+        "f0cfc6b0-c64c-4acb-83dd-1f4abcc4308c",
+        "22fe3296-5ed9-44bd-b67d-1aa4686e41c0"
+      ],
+      "settings": {
+        "page-width": 1200,
+        "td_width": 70,
+        "pc_margin_top": 50,
+        "pc_margin_bottom": 50,
+        "sp-margin_top": 30,
+        "sp-margin_bottom": 30,
+        "th_backgroud": "#f3c406",
+        "th_color": "#000000",
+        "th_text-align": "center"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "9c4aa020-7c3f-40e6-9395-2fcd1a1e4979",
+    "be19e8a1-0582-4b3d-82a2-ba60b381a74f"
+  ]
+}

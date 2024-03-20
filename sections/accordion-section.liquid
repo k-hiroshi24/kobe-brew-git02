@@ -1,0 +1,201 @@
+<div class="accordion">
+  <div class="accordion-container">
+    {% for block in section.blocks %}
+      <div class="accordion-item">
+        <h3 class="accordion-title js-accordion-title">
+          {{ block.settings.ac-q }}
+        </h3>
+        <div class="accordion-content">
+          <p>{{ block.settings.ac-a }}</p>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+
+    
+       
+
+
+
+
+{%- style -%}
+  .accordion {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: {{ section.settings.accordion-margin-top }}px;
+    margin-bottom: {{ section.settings.accordion-margin-bottom }}px;
+    max-width: 950px;
+    position: relative;
+    width: 100%;
+    padding: 0 30px;
+  }
+  .accordion-title {
+    color:{{ section.settings.ac-title-font-color }};
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  .accordion-content {
+    display: none;
+    padding: 10px 20px;
+    background-color:{{ section.settings.ac-contents_background-color }} ;
+  }
+  .accordion-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color:{{ section.settings.ac-contents_font-color }};
+  }
+  /* タイトルの背景色 */
+  .accordion-item {
+    background-color:{{ section.settings.ac-title_background-color }};
+    margin-bottom: 3px;
+    border: 1px solid {{ section.settings.ac-title_border-color }};
+  }
+
+  /* コンテンツボックスの枠線 */
+  .accordion-item .accordion-content {
+    border-bottom: 1px solid {{ section.settings.ac-contents_border-color }};
+    border-left: 1px solid {{ section.settings.ac-contents_border-color }};
+    border-right: 1px solid {{ section.settings.ac-contents_border-color }};
+    margin: 0;
+
+  }
+  /* 矢印 */
+  .accordion-title {
+    position: relative;
+  }
+  .accordion-title::after {
+    border-right: solid 2px {{ section.settings.ac-arrow-color }};
+    border-top: solid 2px {{ section.settings.ac-arrow-color }};
+    content: "";
+    display: block;
+    height: 8px;
+    position: absolute;
+    right: 25px;
+    top: 38%;
+    transform: rotate(135deg);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    width: 8px;
+  }
+  .accordion-title.open::after {
+    top: 45%;
+    transform: rotate(-45deg);
+  }
+{%- endstyle -%}
+
+
+{% schema %}
+  {
+    "name": "アコーディオンセクション",
+    "settings": [
+      {
+        "type": "header",
+        "content": "注意事項",
+        "info": "テキストやカラーを変更した場合、その都度保存をして確認をしてください"
+        
+      },
+      {
+        "type": "range",
+        "id": "accordion-margin-top",
+        "label": "アコーディオンの上部余白",
+        "min": 0,
+        "max": 300,
+        "step": 4,
+        "unit": "px",
+        "default": 40,
+        "info": "上部余白の設定"
+      }, {
+        "type": "range",
+        "id": "accordion-margin-bottom",
+        "label": "アコーディオンの下部余白",
+        "min": 0,
+        "max": 300,
+        "step": 4,
+        "unit": "px",
+        "default": 40,
+        "info": "下部余白の設定"
+      },
+      {
+            "type": "color",
+            "id": "ac-title-font-color",
+            "label": "タイトルフォントカラー",
+            "default": "#fff"
+          },
+          {
+            "type": "color",
+            "id": "ac-contents_font-color",
+            "label": "コンテンツフォントカラー",
+            "default": "#000"
+          },
+          {
+            "type": "color",
+            "id": "ac-title_background-color",
+            "label": "タイトルの背景色",
+            "default": "#0B4566"
+          },
+          {
+            "type": "color",
+            "id": "ac-title_border-color",
+            "label": "タイトル枠のカラー",
+            "default": "#fff"
+          },
+          {
+            "type": "color",
+            "id": "ac-contents_background-color",
+            "label": "コンテンツの背景色",
+            "default": "#fff"
+          },
+          {
+            "type": "color",
+            "id": "ac-contents_border-color",
+            "label": "コンテンツ枠のカラー",
+            "default": "#fff"
+          },
+          {
+            "type": "color",
+            "id": "ac-arrow-color",
+            "label": "タイトル矢印のカラー",
+            "default": "#fff",
+            "info": "タイトル右にある「∨」のカラー"
+          }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "ブロック",
+        "settings": [
+          {
+            "id": "ac-q",
+            "type": "text",
+            "label": "タイトルを入力してください",
+            "default": "タイトルを入力してください"
+          },
+          {
+            "id": "ac-a",
+            "type": "richtext",
+            "label": "コンテンツを入力してください",
+            "default": "<P>コンテンツ内容を入力してください</P>",
+            "info": "改行には<br>を使用してください"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "アコーディオンセクション",
+        "blocks": [
+          {
+            "type": "block"
+          },
+          {
+            "type": "block"
+          },
+          {
+            "type": "block"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

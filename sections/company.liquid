@@ -1,0 +1,204 @@
+<section id="shopify-section-{{ section.id }}" class="page-width">
+    <div class="table__container">
+      <div class="table__wrapper">
+        <table>
+          <tbody class="table_shadow">
+            {% for block in section.blocks %}
+              <tr>
+                <th class="th_text-align_{{ section.settings.th_text-align }}"><p>{{ block.settings.th }}</p></th>
+                <td>{{ block.settings.td }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    #shopify-section-{{ section.id }} .table__wrapper td {
+      width: {{ section.settings.td_width }}%;
+    }
+
+    #shopify-section-{{ section.id }} .page-width {
+      margin-top:{{ section.settings.pc_margin_top }}px;
+      margin-bottom:{{ section.settings.pc_margin_bottom }}px;
+      max-width:{{ section.settings.page-width }}px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media screen and (max-width: 768px) {
+      #shopify-section-{{ section.id }} .page-width {
+          margin-top:{{ section.settings.sp-margin_top }}px;
+          margin-bottom:{{ section.settings.sp-margin_bottom }}px;
+          max-width:100%;
+            padding: 15px;
+      }
+    }
+
+  .th_text-align_left{
+    text-align: left;
+  }
+  .th_text-align_center{
+    text-align: center;
+  }
+
+    .section .container {
+      max-width: 1000px;
+  }
+  .table__container tr, .table__container td {
+      border: 1px solid #333;
+  }
+  .table__container table {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 840px;
+  }
+  .table__wrapper th {
+      padding: 14px 0 0 30px;
+      background:{{ section.settings.th_backgroud }};
+      color:{{ section.settings.th_color }};
+  }
+
+  .table__wrapper td {
+      padding: 14px 28px;
+  }
+  .table__container tr, .table__container td {
+      border: 1px solid #333;
+  }
+  .table_shadow{
+    box-shadow: 16px 17px 18px -8px #777777;
+  }
+  </style>
+
+
+  {% schema %}
+    {
+      "name": "会社概要",
+      "tag": "section",
+      "class": "section",
+      "settings": [
+        {
+          "type": "range",
+          "id": "page-width",
+          "label": "最大コンテンツ幅（pc)",
+          "min": 800,
+          "max": 1500,
+          "unit": "px",
+          "default": 1000,
+          "step": 50
+        },
+        {
+          "type": "range",
+          "id": "td_width",
+          "label": "内容の幅（pc)",
+          "min": 10,
+          "max": 90,
+          "unit": "%",
+          "default": 70,
+          "step": 10
+        },
+        {
+          "type": "range",
+          "id": "pc_margin_top",
+          "label": "PC上余白",
+          "min": 0,
+          "max": 200,
+          "unit": "px",
+          "default": 10,
+          "step": 10
+        },
+        {
+          "type": "range",
+          "id": "pc_margin_bottom",
+          "label": "PC下余白",
+          "min": 0,
+          "max": 200,
+          "unit": "px",
+          "default": 10,
+          "step": 10
+        },
+        {
+          "type": "range",
+          "id": "sp-margin_top",
+          "label": "SP上余白",
+          "min": 0,
+          "max": 200,
+          "unit": "px",
+          "default": 10,
+          "step": 10
+        },
+        {
+          "type": "range",
+          "id": "sp-margin_bottom",
+          "label": "SP下余白",
+          "min": 0,
+          "max": 200,
+          "unit": "px",
+          "default": 10,
+          "step": 10
+        },
+        {
+          "type": "color",
+          "id": "th_backgroud",
+          "label": "項目の背景色",
+          "default": "#f3f0f0"
+          
+        },
+        {
+          "type": "color",
+          "id": "th_color",
+          "label": "フォントカラー",
+          "default": "#000"
+        },
+        {
+        "type": "radio",
+        "id": "th_text-align",
+        "label": "テキスト配置",
+        "options": [
+          {
+            "value": "left",
+            "label": "左寄せ"
+          }, {
+            "value": "center",
+            "label": "中央寄せ"
+          }
+        ],
+        "default": "left"
+      }
+       
+      ],
+      "blocks": [
+        {
+          "type": "table",
+          "name": "テーブル",
+          "settings": [
+            {
+              "id": "th",
+              "type": "text",
+              "label": "項目名",
+              "default": "項目名"
+            },
+            {
+              "id": "td",
+              "type": "textarea",
+              "label": "内容",
+              "default": "<p>内容</p>",
+              "info": "改行には<br>を使用してください"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "会社概要",
+          "blocks": [
+            {
+              "type": "table"
+            }
+          ]
+        }
+      ]
+    }
+    {% endschema %}
+    

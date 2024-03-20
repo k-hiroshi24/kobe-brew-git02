@@ -1,0 +1,217 @@
+
+<div class="horizontal-scroll-section page-width">
+  {% for block in section.blocks %}
+    <div class="horizontal-scroll-img">
+      <a
+        style="border-radius: {{ block.settings.image-redius }}px;"
+        href="{{ block.settings.horizontal-scroll_url }}"><img src="{{ block.settings.horizontal-scroll_img | img_url: 'master'}}"></a>
+      <p class="horizontal-scroll-text">{{ block.settings.horizontal-scroll_richtext }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+  .horizontal-scroll-section {
+    display: flex;
+    overflow-x: auto;
+    text-align: center;
+    width: 100%;
+    gap: {{ section.settings.horizontal-scroll_gap }}px;
+    background-color: {{ section.settings.bg-color }};
+    padding-top: {{ section.settings.horizontal-scroll_padding-top }}px;
+    padding-bottom: {{ section.settings.horizontal-scroll_padding-bottom}}px;
+    margin-top: {{ section.settings.horizontal-scroll_margin-top }}px;
+    margin-bottom: {{ section.settings.horizontal-scroll_margin-bottom }}px;
+  }
+
+  
+  .horizontal-scroll-img {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    
+  }
+  .horizontal-scroll-img a {
+    display: block;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+
+
+  .horizontal-scroll-img img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .horizontal-scroll-img img:hover {
+    transform: scale(1.1);
+  }
+
+  .horizontal-scroll-text {
+    max-width: 200px !important;
+  }
+
+  ::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #ddd8d8;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: {{ section.settings.scroll-color }}
+    ;
+  }
+</style>
+
+
+
+{% schema %}
+  {
+    "name": "横スクロールCTA",
+    "class": "horizontal-scroll-section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "4ブロック以上を推奨してます"
+      },
+      {
+        "type": "header",
+        "content": "余白の設定"
+      },
+      {
+        "type": "header",
+        "content": "余白の設定"
+      },
+      {
+        "type": "range",
+        "id": "horizontal-scroll_margin-top",
+        "label": "横スクロールセクションの外側上部余白",
+        "min": 0,
+        "max": 300,
+        "step": 4,
+        "unit": "px",
+        "default": 0,
+        "info": "外側上部余白の設定"
+      },
+      {
+        "type": "range",
+        "id": "horizontal-scroll_margin-bottom",
+        "label": "横スクロールセクションの外側下部余白",
+        "min": 0,
+        "max": 300,
+        "step": 4,
+        "unit": "px",
+        "default": 0,
+        "info": "外側下部余白の設定"
+      },
+      {
+        "type": "range",
+        "id": "horizontal-scroll_padding-top",
+        "label": "横スクロールセクションの内側上部余白",
+        "min": 0,
+        "max": 300,
+        "step": 4,
+        "unit": "px",
+        "default": 12,
+        "info": "内側上部余白の設定"
+
+      }, {
+        "type": "range",
+        "id": "horizontal-scroll_padding-bottom",
+        "label": "横スクロールセクションの外側下部余白",
+        "min": 0,
+        "max": 300,
+        "step": 4,
+        "unit": "px",
+        "default": 12,
+        "info": "内側下部余白の設定"
+      }, {
+        "type": "range",
+        "id": "horizontal-scroll_gap",
+        "label": "画像と画像の余白",
+        "min": 20,
+        "max": 120,
+        "step": 4,
+        "unit": "px",
+        "default": 20,
+        "info": "画像と画像の余白を設定してください"
+      }, {
+        "type": "header",
+        "content": "カラー設定"
+      }, {
+        "type": "color",
+        "id": "bg-color",
+        "label": "背景カラー",
+        "default": "#fff",
+        "info": "背景のカラー設定してください"
+      }, {
+        "type": "color",
+        "id": "scroll-color",
+        "label": "スクロールバーのカラー",
+        "default": "#f3c406",
+        "info": "スクロールバーのカラー設定してください"
+      },{
+        "type": "checkbox",
+        "id": "horizontal-scroll_checkbox",
+        "label": "カードを中央"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "horizontal-scroll_image",
+        "name": "画像",
+        "limit": 10,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "horizontal-scroll_img",
+            "label": "画像",
+            "info": "CTAの画像を選択してください"
+          }, {
+            "type": "url",
+            "id": "horizontal-scroll_url",
+            "label": "画像リンク",
+            "info": "画像リンクを入力してください"
+          }, {
+            "type": "richtext",
+            "id": "horizontal-scroll_richtext",
+            "label": "ディスクリプション",
+            "default": "<p>テキストが入ります</p>",
+            "info": "ディスクリプションを入力してください"
+          }, {
+            "type": "range",
+            "id": "image-redius",
+            "label": "画像の丸み",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "default": 0,
+            "info": "画像の丸みを設定してください"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "横スクロールCTA",
+        "blocks": [
+          {
+            "type": "horizontal-scroll_image"
+          }, {
+            "type": "horizontal-scroll_image"
+          }, {
+            "type": "horizontal-scroll_image"
+          }, {
+            "type": "horizontal-scroll_image"
+          }
+
+        ]
+      }
+    ]
+  }
+{% endschema %}
